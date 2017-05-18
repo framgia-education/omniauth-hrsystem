@@ -6,7 +6,8 @@ module OmniAuth
  module Strategies
   class HrSystem < OmniAuth::Strategies::OAuth2
     class NoAuthorizationCodeError < StandardError; end
-    CUSTOM_PROVIDER_URL = "http://auth.framgia.vn"
+    # CUSTOM_PROVIDER_URL = "http://auth.framgia.vn"
+    CUSTOM_PROVIDER_URL = "http://localhost:4000"
 
     option :name, "hr_system"
 
@@ -16,15 +17,11 @@ module OmniAuth
       token_url: "#{CUSTOM_PROVIDER_URL}/auth/hr_system/access_token"
     }
 
-    uid do
-      raw_info["uid"]
-    end
+    # uid do
+    #   raw_info["uid"]
+    # end
 
     info do
-      raw_info["info"]
-    end
-
-    extra do
       raw_info
     end
 
