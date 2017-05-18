@@ -7,7 +7,7 @@ Framgia HrSystem OAuth2 Strategy for OmniAuth.
 Add to your `Gemfile`:
 
 ```ruby
-gem "omniauth-hrsystem"
+gem "omniauth-hrsystem", git: "git@github.com:dieunb/omniauth-hrsystem.git", branch: "develop"
 ```
 
 Then `bundle install`.
