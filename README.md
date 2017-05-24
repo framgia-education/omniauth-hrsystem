@@ -7,7 +7,7 @@ Framgia HrSystem OAuth2 Strategy for OmniAuth.
 Add to your `Gemfile`:
 
 ```ruby
-gem "omniauth-hrsystem", git: "git@github.com:dieunb/omniauth-hrsystem.git", branch: "master"
+gem "omniauth-hrsystem", git: "https://github.com/framgia-education/omniauth-hrsystem.git"
 ```
 
 Then `bundle install`.
@@ -18,6 +18,7 @@ Then `bundle install`.
 
 ### With Devise gem
 Here is a possible configuration for `config/initializers/devise.rb:
+note: Signin [http://auth.framgia.vn/](http://auth.framgia.vn/) to get` APP_ID` and `APP_SECRET`
 
 ```ruby
 config.omniauth :hr_system, ENV["APP_ID"], ENV["APP_SECRET"]
