@@ -17,7 +17,11 @@ module OmniAuth
     }
 
     uid do
-      raw_info["uid"]
+      raw_info["employee_code"]
+    end
+
+    employee_code do
+      raw_info["employee_code"]
     end
 
     info do
