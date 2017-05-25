@@ -20,10 +20,6 @@ module OmniAuth
       raw_info["employee_code"]
     end
 
-    employee_code do
-      raw_info["employee_code"]
-    end
-
     info do
       raw_info
     end
