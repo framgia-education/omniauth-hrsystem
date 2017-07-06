@@ -16,9 +16,10 @@ Then `bundle install`.
 
 `OmniAuth::Strategies::HrSystem` is simply a Rack middleware. Read the OmniAuth docs for detailed instructions: https://github.com/intridea/omniauth.
 
-### With Devise gem
-Here is a possible configuration for `config/initializers/devise.rb:
 Note: Contact WSM Admin to get ACCESS KEYS (`APP_ID` and `APP_SECRET`)
+
+### With Devise gem
+Here is a possible configuration for `config/initializers/devise.rb`:
 
 ```ruby
 config.omniauth :wsm, ENV["APP_ID"], ENV["APP_SECRET"]
