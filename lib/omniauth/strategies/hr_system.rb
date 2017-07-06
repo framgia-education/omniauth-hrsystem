@@ -6,14 +6,14 @@ module OmniAuth
  module Strategies
   class HrSystem < OmniAuth::Strategies::OAuth2
     class NoAuthorizationCodeError < StandardError; end
-    CUSTOM_PROVIDER_URL = "http://auth.framgia.vn"
+    CUSTOM_PROVIDER_URL = "https://wsm.framgia.vn"
 
-    option :name, "hr_system"
+    option :name, "wsm"
 
     option :client_options, {
       site: CUSTOM_PROVIDER_URL,
-      authorize_url: "#{CUSTOM_PROVIDER_URL}/auth/hr_system/authorize",
-      token_url: "#{CUSTOM_PROVIDER_URL}/auth/hr_system/access_token"
+      authorize_url: "#{CUSTOM_PROVIDER_URL}/auth/wsm/authorize",
+      token_url: "#{CUSTOM_PROVIDER_URL}/auth/wsm/access_token"
     }
 
     uid do
