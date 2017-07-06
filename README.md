@@ -7,7 +7,7 @@ Framgia HrSystem OAuth2 Strategy for OmniAuth.
 Add to your `Gemfile`:
 
 ```ruby
-gem "omniauth-hrsystem", git: "https://github.com/framgia-education/omniauth-hrsystem.git"
+gem "omniauth-hrsystem", git: "https://github.com/framgia-education/omniauth-hrsystem.git", branch: :wsm
 ```
 
 Then `bundle install`.
@@ -18,10 +18,10 @@ Then `bundle install`.
 
 ### With Devise gem
 Here is a possible configuration for `config/initializers/devise.rb:
-note: Signin [http://auth.framgia.vn/](http://auth.framgia.vn/) to get` APP_ID` and `APP_SECRET`
+Note: Contact WSM Admin to get ACCESS KEYS (`APP_ID` and `APP_SECRET`)
 
 ```ruby
-config.omniauth :hr_system, ENV["APP_ID"], ENV["APP_SECRET"]
+config.omniauth :wsm, ENV["APP_ID"], ENV["APP_SECRET"]
 ```
 
 `routes.rb`
@@ -57,7 +57,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     redirect_to root_path
   end
 
-  alias_method :hr_system, :create
+  alias_method :wsm, :create
 end
 ```
 
@@ -67,7 +67,7 @@ Here"s a quick example, adding the middleware to a Rails app in `config/initiali
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :hr_system, ENV["HRSYSTEM_KEY"], ENV["HRSYSTEM_SECRET"]
+  provider :wsm, ENV["HRSYSTEM_KEY"], ENV["HRSYSTEM_SECRET"]
 end
 ```
 
