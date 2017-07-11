@@ -8,12 +8,12 @@ module OmniAuth
     class NoAuthorizationCodeError < StandardError; end
     CUSTOM_PROVIDER_URL = "https://wsm.framgia.vn"
 
-    option :name, "wsm"
+    option :name, "hr_system"
 
     option :client_options, {
       site: CUSTOM_PROVIDER_URL,
-      authorize_url: "#{CUSTOM_PROVIDER_URL}/auth/wsm/authorize",
-      token_url: "#{CUSTOM_PROVIDER_URL}/auth/wsm/access_token"
+      authorize_url: "#{CUSTOM_PROVIDER_URL}/auth/hr_system/authorize",
+      token_url: "#{CUSTOM_PROVIDER_URL}/auth/hr_system/access_token"
     }
 
     uid do
