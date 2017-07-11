@@ -12,8 +12,8 @@ module OmniAuth
 
     option :client_options, {
       site: CUSTOM_PROVIDER_URL,
-      authorize_url: "#{CUSTOM_PROVIDER_URL}/auth/hr_system/authorize",
-      token_url: "#{CUSTOM_PROVIDER_URL}/auth/hr_system/access_token"
+      authorize_url: "#{CUSTOM_PROVIDER_URL}/authorize",
+      token_url: "#{CUSTOM_PROVIDER_URL}/auth/access_token"
     }
 
     uid do
@@ -25,7 +25,11 @@ module OmniAuth
     end
 
     def raw_info
-      @raw_info ||= access_token.get("me", info_options).parsed || {}
+      begin
+        @raw_info = access_token.post("me", info_options).parsed
+      rescue Exception => e
+        return e.response.body
+      end
     end
 
     def info_options
