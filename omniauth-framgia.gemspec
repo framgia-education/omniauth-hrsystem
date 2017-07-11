@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "omniauth/framgia/version"
 
 Gem::Specification.new do |s|
-  s.name     = "omniauth-framgia"
+  s.name     = "omniauth-hrsystem"
   s.version  = OmniAuth::Framgia::VERSION
   s.authors  = ["DieuNB"]
   s.email    = ["dieunb@gmail.com"]
