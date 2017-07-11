@@ -1,13 +1,13 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "omniauth/hr_system/version"
+require "omniauth/framgia/version"
 
 Gem::Specification.new do |s|
-  s.name     = "omniauth-hrsystem"
-  s.version  = OmniAuth::HrSystem::VERSION
+  s.name     = "omniauth-framgia"
+  s.version  = OmniAuth::Framgia::VERSION
   s.authors  = ["DieuNB"]
   s.email    = ["dieunb@gmail.com"]
-  s.summary  = "Framgia HrSystem OAuth2 Strategy for OmniAuth"
+  s.summary  = "Framgia OAuth2 Strategy for OmniAuth"
   s.homepage = "https://github.com/dieunb/omniauth-hrsystem"
   s.license  = "MIT"
 
